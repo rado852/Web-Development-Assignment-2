@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>WeatherAPP</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="/custom.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <!-- Main Content -->
+  <main class="hero is-fullheight has-background-primary-80">
+    <section class="hero is-flex is-justify-content-space-evenly">
+      <header
+        class="container is-flex is-justify-content-space-between is-align-items-center"
+      >
+      <!-- Logo -->
+        <figure class="image mb-6">
+          <img src="/data/logo.png" alt="logo" />
+        </figure>
+        <!-- Current City and Data -->
+        <div class="current-city-and-data is-flex mr-6 pr-6">
+          <div
+            class="city is-flex is-flex-direction-column mt-5 mr-6 is-align-items-center"
+          >
+            <h2 class="has-text-black is-size-1">Berlin</h2>
+            <span class="has-text-black">Today</span>
+          </div>
+          <div
+            class="column is-four-fifths has-background-primary-00 mr-6 is-flex is-flex-direction-column is-justify-content-space-between p-5 is-align-items-center"
+          >
+            <span class="has-text-light">Right Now</span>
+            <div
+              class="current-data is-flex column is-justify-content-space-between is-full"
+            >
+              <span id="currentTemperature" class="has-text-light"></span>
+              <span id="currentWindSpeed" class="has-text-light"></span>
+            </div>
+          </div>
+        </div>
+      </header>
+       <!-- Weather Data -->
+      <section
+        class="columns is-flex is-justify-content-space-around is-align-items-center"
+      >
+        <figure class="weather-image image is-300x300">
+          <img id="weatherImage" src="/assets/drizzle.png" alt="weatherImage" />
+        </figure>
+        <!-- Max Temperature -->
+        <article class="column is-one-quarter p-4 has-background-primary-00">
+          <p class="is-flex is-flex-direction-column is-align-items-center">
+            <span class="has-text-light">Max temp</span>
+            <span class="p-5 has-text-light" id="maxTemperature"></span>
+          </p>
+        </article>
+         <!-- Max Wind Speed -->
+        <div
+          class="has-background-primary-00 is-flex is-justify-content-center p-4 column is-one-quarter mr-5"
+        >
+          <p class="is-flex is-flex-direction-column is-align-items-center">
+            <span class="has-text-light">Max wind</span>
+            <span class="has-text-light p-5" id="maxWind"></span>
+          </p>
+        </div>
+      </section>
+    </section>
+    <!-- Weekly Forecast -->
+    <section
+      class="columns m-0 p-4 has-background-primary-80 is-flex is-justify-content-center"
+      id="daysOfWeekContainer"
+    ></section>
+  </main>
+  <!-- JavaScript -->
+  <body>
+    <script type="module" src="/js/script.js"></script>
+  </body>
+</html>
